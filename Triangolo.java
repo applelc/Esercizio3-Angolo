@@ -15,23 +15,20 @@ public class Triangolo
     {
         int sommaAngolo=0;
         
-        sommaAngolo+=a1.getGradi()+a2.getGradi()+a3.getGradi();
+        sommaAngolo=a1.getGradi()+a2.getGradi()+a3.getGradi();
         
-        /* if((sommaAngolo<180)||(sommaAngolo>180))
+        if(sommaAngolo==180)
         {
-            */
             setAngolo1(a1);
             setAngolo2(a2);
             setAngolo3(a3);
-            /*
         }
         else
         {
-            a1 = new Angolo(60,0,0);
-            a2 = new Angolo(60,0,0);
-            a3 = new Angolo(60,0,0);
+            this.a1 = new Angolo(60,0,0);
+            this.a2 = new Angolo(60,0,0);
+            this.a3 = new Angolo(60,0,0);
         }
-        */
     }
     
     private void setAngolo1(Angolo a)

@@ -13,7 +13,7 @@ public class Test
         Triangolo t1;
         
         a1 = new Angolo(10,0,0);
-        a2 = new Angolo(70,0,0);
+        a2 = new Angolo(90,0,0);
         a3 = new Angolo(100,0,0);
         
         t1 = new Triangolo(a1,a2,a3);
