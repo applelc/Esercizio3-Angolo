@@ -48,6 +48,22 @@ public class Triangolo
     
     public String toString()
     {
-        return "Angolo 1: " + a1.visualizzaAngolo() + "\nAngolo 2: " + a2.visualizzaAngolo() + "\nAngolo 3: " + a3.visualizzaAngolo();
+        String s="";
+        if((a1.getGradi()==90)||(a2.getGradi()==90)||(a3.getGradi()==90))
+            s="Triangolo rettangolo";
+        
+        else if((a1.getGradi()==60)&&(a2.getGradi()==60)&&(a3.getGradi()==60))
+            s="Triangolo equilatero";
+        
+        if((a1.getGradi()==a2.getGradi())&&(a1.getGradi()!=a3.getGradi())||
+            (a1.getGradi()==a3.getGradi())&&(a2.getGradi()!=a3.getGradi())||
+            (a2.getGradi()==a3.getGradi())&&(a1.getGradi()!=a3.getGradi()))
+            s+=" Triangolo isoscele";
+         
+        else if((a1.getGradi()!=a2.getGradi())&&(a2.getGradi()!=a3.getGradi())&&(a1.getGradi()!=a3.getGradi())&&
+        !((a1.getGradi()==90)||(a2.getGradi()==90)||(a3.getGradi()==90)))
+            s="Triangolo scaleno";
+            s+=" Angolo 1: " + a1.visualizzaAngolo() + "\nAngolo 2: " + a2.visualizzaAngolo() + "\nAngolo 3: " + a3.visualizzaAngolo();
+        return s;
     }
 }
